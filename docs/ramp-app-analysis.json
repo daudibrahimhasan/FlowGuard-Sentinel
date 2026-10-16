@@ -1,0 +1,61 @@
+{
+  "archive": "app.ramp.com.zip",
+  "archive_bytes": 12947665,
+  "archive_entries": 789,
+  "source_bundle": "application-Omqrq55a.js",
+  "bundle_sha256": "e7bd942a74d2ed6f99572b3f3609931f3253b0c71043d3f91a818436a0359a59",
+  "type_scale": [
+    {
+      "name": "xxl",
+      "fontSize": 36.0,
+      "lineHeight": 40.0,
+      "fontWeight": 400.0
+    },
+    {
+      "name": "xl",
+      "fontSize": 28.0,
+      "lineHeight": 32.0,
+      "fontWeight": 400.0
+    },
+    {
+      "name": "l",
+      "fontSize": 20.0,
+      "lineHeight": 28.0,
+      "fontWeight": 400.0
+    },
+    {
+      "name": "m",
+      "fontSize": 16.0,
+      "lineHeight": 24.0,
+      "fontWeight": 400.0
+    },
+    {
+      "name": "s",
+      "fontSize": 14.0,
+      "lineHeight": 20.0,
+      "fontWeight": 400.0
+    },
+    {
+      "name": "xs",
+      "fontSize": 12.0,
+      "lineHeight": 16.0,
+      "fontWeight": 400.0
+    }
+  ],
+  "navigation": {
+    "font_size_token": "s",
+    "line_height_token": "s",
+    "resolved_font_size_px": 14,
+    "resolved_line_height_px": 20
+  },
+  "observed_text_colors": {
+    "primary": "#1A1919",
+    "hushed": "#6E6A68",
+    "disabled": "#A39D99"
+  },
+  "notes": [
+    "Static analysis only. Archived scripts and API captures were not executed.",
+    "The archive includes app bundles, navigation, design tokens and Lausanne font assets.",
+    "FlowGuard retains Poppins, Inter and IBM Plex Mono; no Lausanne font assets are shipped."
+  ]
+}

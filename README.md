@@ -160,7 +160,7 @@ npm run build
 npm run start -- --hostname 127.0.0.1
 ```
 
-The current local validation passed **29 backend tests, 8 frontend tests and 8 browser journeys**, plus lint, TypeScript and a production build. The UI redesign was inspected across all eight screens at 1440×900, 1280×800, 768×1024 and 390×844. See the [reference analysis](docs/ui-reference-analysis.md) and [UI validation](docs/ui-validation.md).
+The latest UI revision passed **29 backend tests, 8 frontend tests and 4 read-only browser journeys**, plus lint, TypeScript and a production build. All eight screens were captured at 1440×900, 1280×800, 768×1024 and 390×844. The browser checks cover navigation, keyboard controls, filters, responsive layouts and a populated approval ledger using browser-only fixtures. See the [Ramp app typography analysis](docs/ramp-app-typography.md); earlier financial workflow validation is recorded in [UI validation](docs/ui-validation.md).
 
 Browser tests change synthetic state, so use a fresh reset with both servers running. Installation and reproduction steps are in [scripts/browser/README.md](scripts/browser/README.md). See [validation evidence](submission/validation.md) for scope, warnings and unverified items.
 

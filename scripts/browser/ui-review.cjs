@@ -1,6 +1,6 @@
 const {chromium,expect}=require('@playwright/test');
 const fs=require('node:fs');const path=require('node:path');
-const out=path.resolve(__dirname,'../../submission/ui-review');fs.mkdirSync(out,{recursive:true});
+const out=path.resolve(__dirname,process.argv[2]||'../../submission/ui-review');fs.mkdirSync(out,{recursive:true});
 const screens=['Overview','Cash-flow analysis','Recovery agent','Approvals','Financing','Security center','Evaluation lab','Audit trail'];
 (async()=>{
  const browser=await chromium.launch();const results=[];

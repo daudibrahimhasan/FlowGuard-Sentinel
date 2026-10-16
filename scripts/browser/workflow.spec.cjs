@@ -58,7 +58,8 @@ test('Navigation, financial details, financing, security and recorded paired sce
   }
   await page.getByLabel('Business scenario').selectOption('services');
   await page.getByRole('button',{name:'Overview',exact:true}).click();
-  await expect(page.locator('.overview-meta strong')).toHaveText('Willow Studio Services (synthetic)');
+  await expect(page.getByLabel('Business scenario')).toHaveValue('services');
+  await expect(page.getByLabel('Business scenario').locator('option:checked')).toHaveText('Willow Studio Services (synthetic)');
 });
 test('Read-only API restrictions and mobile layout',async({page,request})=>{
   const r=await request.post('/api/businesses/retail/proposals',{headers:{'X-Demo-User':'viewer'},data:{}});expect(r.status()).toBe(403);
@@ -164,4 +165,25 @@ test('Command keyboard selection, empty results, logo and collapsed tooltips',as
  await page.getByRole('navigation').getByRole('button',{name:'Security center',exact:true}).focus();
  await expect(page.getByRole('tooltip')).toContainText('Security center');
  await page.screenshot({path:'../../submission/screenshots/component-navigation.png',animations:'disabled'});
+});
+
+// Browser-only records exercise the ledger without creating proposals or calling the LLM.
+test('Approval ledger renders populated rows and opens a read-only preview',async({page,request})=>{
+ const dashboard=await (await request.get('/api/businesses/retail/dashboard',{headers:{'X-Demo-User':'owner'}})).json();
+ const invoice=dashboard.invoices.find(i=>i.amount>i.paid);
+ const expense=dashboard.expenses.find(e=>e.flexible);
+ const rows=[{id:'ui-preview-reminder',business_id:'retail',type:'invoice_reminder',target_id:invoice.id,recipient:invoice.recipient,amount:invoice.amount-invoice.paid,reason:'Read-only browser fixture: review an outstanding invoice.',message:'Payment reminder preview.',status:'proposed'},{id:'ui-preview-expense',business_id:'retail',type:'expense_reschedule',target_id:expense.id,amount:expense.amount,new_date:'2026-11-04',reason:'Read-only browser fixture: review an eligible obligation.',status:'proposed'}];
+ await page.route('**/api/businesses/retail/dashboard',route=>route.fulfill({json:{...dashboard,proposals:rows}}));
+ await page.route('**/api/proposals/ui-preview-*/preview',route=>route.fulfill({json:{available:false,reason:'Read-only visual fixture. No server proposal was created.'}}));
+ await page.goto('/');
+ await page.getByRole('navigation').getByRole('button',{name:'Approvals',exact:true}).click();
+ await expect(page.locator('.proposal-table tbody tr')).toHaveCount(2);
+ await expect(page.locator('.proposal-table')).toContainText(invoice.recipient);
+ await page.screenshot({path:'../../submission/ramp-rebuild/approval-ledger-fixture-1440.png',animations:'disabled'});
+ await page.getByRole('button',{name:'Inspect action'}).first().click();
+ await expect(page.getByRole('dialog')).toContainText('Read-only visual fixture. No server proposal was created.');
+ await page.getByRole('button',{name:'Close proposal'}).click();
+ await page.setViewportSize({width:390,height:844});
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth)).toBe(true);
+ await page.screenshot({path:'../../submission/ramp-rebuild/approval-ledger-fixture-390.png',animations:'disabled'});
 });

@@ -1,0 +1,290 @@
+[
+  {
+    "screen": "Overview",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "overview-1440.png"
+  },
+  {
+    "screen": "Cash-flow analysis",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "cash-flow-analysis-1440.png"
+  },
+  {
+    "screen": "Recovery agent",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "recovery-agent-1440.png"
+  },
+  {
+    "screen": "Approvals",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "approvals-1440.png"
+  },
+  {
+    "screen": "Financing",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "financing-1440.png"
+  },
+  {
+    "screen": "Security center",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "security-center-1440.png"
+  },
+  {
+    "screen": "Evaluation lab",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "evaluation-lab-1440.png"
+  },
+  {
+    "screen": "Audit trail",
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "audit-trail-1440.png"
+  },
+  {
+    "screen": "Overview",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "overview-1280.png"
+  },
+  {
+    "screen": "Cash-flow analysis",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "cash-flow-analysis-1280.png"
+  },
+  {
+    "screen": "Recovery agent",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "recovery-agent-1280.png"
+  },
+  {
+    "screen": "Approvals",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "approvals-1280.png"
+  },
+  {
+    "screen": "Financing",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "financing-1280.png"
+  },
+  {
+    "screen": "Security center",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "security-center-1280.png"
+  },
+  {
+    "screen": "Evaluation lab",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "evaluation-lab-1280.png"
+  },
+  {
+    "screen": "Audit trail",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "audit-trail-1280.png"
+  },
+  {
+    "screen": "Overview",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "overview-768.png"
+  },
+  {
+    "screen": "Cash-flow analysis",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "cash-flow-analysis-768.png"
+  },
+  {
+    "screen": "Recovery agent",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "recovery-agent-768.png"
+  },
+  {
+    "screen": "Approvals",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "approvals-768.png"
+  },
+  {
+    "screen": "Financing",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "financing-768.png"
+  },
+  {
+    "screen": "Security center",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "security-center-768.png"
+  },
+  {
+    "screen": "Evaluation lab",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "evaluation-lab-768.png"
+  },
+  {
+    "screen": "Audit trail",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "audit-trail-768.png"
+  },
+  {
+    "screen": "Overview",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "overview-390.png"
+  },
+  {
+    "screen": "Cash-flow analysis",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "cash-flow-analysis-390.png"
+  },
+  {
+    "screen": "Recovery agent",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "recovery-agent-390.png"
+  },
+  {
+    "screen": "Approvals",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "approvals-390.png"
+  },
+  {
+    "screen": "Financing",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "financing-390.png"
+  },
+  {
+    "screen": "Security center",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "security-center-390.png"
+  },
+  {
+    "screen": "Evaluation lab",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "evaluation-lab-390.png"
+  },
+  {
+    "screen": "Audit trail",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "page_errors": [],
+    "request_error": 0,
+    "screenshot": "audit-trail-390.png"
+  }
+]

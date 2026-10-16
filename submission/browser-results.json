@@ -5,7 +5,9 @@
       "D:\\Compitetion\\Shenzhen\\FlowGuard Sentinel\\scripts\\browser\\node_modules\\@playwright\\test\\cli.js",
       "test",
       "--config",
-      "playwright.config.cjs"
+      "playwright.config.cjs",
+      "--grep",
+      "Approval ledger renders|Navigation, financial details|Command keyboard selection|Command navigation, invoice"
     ],
     "configFile": "D:\\Compitetion\\Shenzhen\\FlowGuard Sentinel\\scripts\\browser\\playwright.config.cjs",
     "rootDir": "D:/Compitetion/Shenzhen/FlowGuard Sentinel/scripts/browser",
@@ -102,40 +104,6 @@
       "line": 0,
       "specs": [
         {
-          "title": "Owner workflow: detect gap, reminder without cash, edit approval, reschedule and inspect evidence",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2964,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T13:36:39.674Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "9dd6095910c8eaac1dc1-75f8bc8be6405fc39fc8",
-          "file": "workflow.spec.cjs",
-          "line": 5,
-          "column": 1
-        },
-        {
           "title": "Navigation, financial details, financing, security and recorded paired scenarios",
           "ok": true,
           "tags": [],
@@ -151,12 +119,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1574,
+                  "duration": 1424,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T13:36:42.760Z",
+                  "startTime": "2026-10-16T14:10:33.323Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -167,74 +135,6 @@
           "id": "9dd6095910c8eaac1dc1-b7376b529318fc38d6e2",
           "file": "workflow.spec.cjs",
           "line": 42,
-          "column": 1
-        },
-        {
-          "title": "Read-only API restrictions and mobile layout",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 553,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T13:36:44.344Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "9dd6095910c8eaac1dc1-ad5bf7b935e0c15d9d42",
-          "file": "workflow.spec.cjs",
-          "line": 63,
-          "column": 1
-        },
-        {
-          "title": "Owner rejects a proposal and explicitly records a partial sandbox receipt",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1328,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T13:36:44.908Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "9dd6095910c8eaac1dc1-a3036c13ebf7fa217815",
-          "file": "workflow.spec.cjs",
-          "line": 72,
           "column": 1
         },
         {
@@ -253,12 +153,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1222,
+                  "duration": 894,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T13:36:46.246Z",
+                  "startTime": "2026-10-16T14:10:34.843Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -268,75 +168,7 @@
           ],
           "id": "9dd6095910c8eaac1dc1-5f0d30017c455a62a3a3",
           "file": "workflow.spec.cjs",
-          "line": 96,
-          "column": 1
-        },
-        {
-          "title": "Changed recipient is blocked after approval and explained in Security center",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1652,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T13:36:47.480Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "9dd6095910c8eaac1dc1-067f1f413ce104ab336e",
-          "file": "workflow.spec.cjs",
-          "line": 119,
-          "column": 1
-        },
-        {
-          "title": "A failed financial read can be retried without refreshing the page",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 60000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 571,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-10-16T13:36:49.144Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "9dd6095910c8eaac1dc1-cfda9e9b3c20afc7d100",
-          "file": "workflow.spec.cjs",
-          "line": 138,
+          "line": 97,
           "column": 1
         },
         {
@@ -355,12 +187,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1088,
+                  "duration": 789,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T13:36:49.727Z",
+                  "startTime": "2026-10-16T14:10:35.746Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -370,7 +202,41 @@
           ],
           "id": "9dd6095910c8eaac1dc1-b323310b5ee7346dfd75",
           "file": "workflow.spec.cjs",
-          "line": 149,
+          "line": 150,
+          "column": 1
+        },
+        {
+          "title": "Approval ledger renders populated rows and opens a read-only preview",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 905,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T14:10:36.549Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9dd6095910c8eaac1dc1-2c4764d80ccc024bd9a7",
+          "file": "workflow.spec.cjs",
+          "line": 171,
           "column": 1
         }
       ]
@@ -378,9 +244,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-16T13:36:39.298Z",
-    "duration": 11639.392,
-    "expected": 8,
+    "startTime": "2026-10-16T14:10:32.985Z",
+    "duration": 4583.076,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
