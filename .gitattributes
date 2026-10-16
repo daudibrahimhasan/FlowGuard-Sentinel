@@ -1,0 +1,4 @@
+# These files are hashed byte-for-byte by the recorded evaluation.
+# Preserve their validated bytes across Windows and Unix checkouts.
+backend/app/engine.py -text
+evaluation/scenarios/frozen-v1.json -text
