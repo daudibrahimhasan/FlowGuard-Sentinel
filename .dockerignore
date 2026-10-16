@@ -1,0 +1,9 @@
+.git
+backend/.venv
+backend/.pip-cache
+frontend/node_modules
+frontend/.next
+frontend/.npm-cache
+.env
+*.log
+data/*.db*
