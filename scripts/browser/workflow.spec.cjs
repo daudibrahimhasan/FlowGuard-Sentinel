@@ -144,3 +144,24 @@ test('A failed financial read can be retried without refreshing the page',async(
   await expect(page.getByText('Available cash',{exact:true})).toBeVisible();
   await expect(page.locator('.error')).toHaveCount(0);
 });
+
+// Read-only component coverage, independent of the synthetic financial ledger.
+test('Command keyboard selection, empty results, logo and collapsed tooltips',async({page})=>{
+ await page.goto('/');
+ await expect(page.locator('.sidebar .brand img')).toBeVisible();
+ await page.getByRole('button',{name:'Open command palette'}).click();
+ const search=page.getByRole('combobox',{name:'Search workspace pages'});
+ await expect(search).toBeFocused();
+ await search.press('ArrowDown');
+ await search.press('Enter');
+ await expect(page.getByRole('heading',{level:1})).toHaveText('Cash-flow analysis');
+ await page.getByRole('button',{name:'Open command palette'}).click();
+ await search.fill('zzzzmissing');
+ await expect(page.getByText(/No pages match/)).toBeVisible();
+ await search.press('Escape');
+ await expect(page.getByRole('button',{name:'Open command palette'})).toBeFocused();
+ await page.getByRole('button',{name:'Collapse sidebar'}).click();
+ await page.getByRole('navigation').getByRole('button',{name:'Security center',exact:true}).focus();
+ await expect(page.getByRole('tooltip')).toContainText('Security center');
+ await page.screenshot({path:'../../submission/screenshots/component-navigation.png',animations:'disabled'});
+});

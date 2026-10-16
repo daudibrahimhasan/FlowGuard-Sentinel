@@ -160,7 +160,7 @@ npm run build
 npm run start -- --hostname 127.0.0.1
 ```
 
-The current local validation passed **29 backend tests, 8 frontend tests and 7 browser journeys**, plus lint, TypeScript and a production build. The UI redesign was inspected across all eight screens at 1440×900, 1280×800, 768×1024 and 390×844. See the [reference analysis](docs/ui-reference-analysis.md) and [UI validation](docs/ui-validation.md).
+The current local validation passed **29 backend tests, 8 frontend tests and 8 browser journeys**, plus lint, TypeScript and a production build. The UI redesign was inspected across all eight screens at 1440×900, 1280×800, 768×1024 and 390×844. See the [reference analysis](docs/ui-reference-analysis.md) and [UI validation](docs/ui-validation.md).
 
 Browser tests change synthetic state, so use a fresh reset with both servers running. Installation and reproduction steps are in [scripts/browser/README.md](scripts/browser/README.md). See [validation evidence](submission/validation.md) for scope, warnings and unverified items.
 
@@ -201,3 +201,5 @@ Start with [architecture](docs/architecture.md), [data methodology](docs/data_me
 Read `evaluation/reports/latest.md` for computed results and `docs/evaluation_methodology.md` for denominators and experiment boundaries. The 28 scenarios use frozen proposals, not live-model generations. Six independent attack contributions remain pending. Both arms share financial verification; its benefit cannot be attributed to the gate ablation.
 
 The prototype is ready for a local demonstration. [Research notes](data/sources/research_notes.md) distinguish sourced context from illustrative assumptions. Read [known limitations](submission/known_limitations.md) before presenting the evaluation or considering broader use.
+
+UI component choices, source links and licenses are documented in [Component sources](docs/ui-component-sources.md). Branding uses the supplied FGS monogram; Lucide remains the only icon library.
