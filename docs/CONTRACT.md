@@ -12,6 +12,7 @@ POST /api/proposals/{id}/reject -> proposal
 POST /api/proposals/{id}/execute -> {proposal,verification,policy}
 POST /api/businesses/{id}/receipts body {invoice_id,amount} -> dashboard (owner sandbox event)
 GET /api/businesses/{id}/financing -> {options:[{name,principal,annual_rate,fee,term_days,interest,total_repayment,total_cost,repayment_schedule,risk}],assumptions}
+GET /api/proposals/{id}/preview -> read-only saved-action forecast on a copy: {available,current_minimum,proposed_minimum,change,confirmed_cash_change:0,note,approval_granted:false}; invalid/protected/terminal actions return {available:false,reason}. No execution or approval capability.
 GET /api/security -> {identities,mandates,blocked,protected_categories,audit_integrity}
 GET /api/audit?q= -> {events:[],integrity:{valid,count}} events id,timestamp,event,business_id,details,hash,previous_hash
 GET /api/evaluation -> persisted report or unavailable; POST /api/evaluation/run -> run isolated evaluation report

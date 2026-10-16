@@ -20,5 +20,10 @@ if (!$apiReady) { throw 'Backend did not become ready. Check backend-error.log b
 $webCommand = if ($Production) { 'npm run start -- --hostname 127.0.0.1' } else { 'npm run dev -- --hostname 127.0.0.1' }
 $web = Start-Process -FilePath 'cmd.exe' -ArgumentList '/c',$webCommand -WorkingDirectory (Join-Path $projectRoot 'frontend') -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $projectRoot 'frontend-server.log') -RedirectStandardError (Join-Path $projectRoot 'frontend-error.log')
 @{backend=$api.Id;frontend=$web.Id} | ConvertTo-Json | Set-Content (Join-Path $projectRoot '.server-pids.json')
+$webReady = $false
+for ($attempt = 0; $attempt -lt 20; $attempt++) {
+  try { $page = Invoke-WebRequest 'http://127.0.0.1:3000' -TimeoutSec 2; if ($page.StatusCode -eq 200) { $webReady = $true; break } } catch { Start-Sleep -Milliseconds 250 }
+}
+if (!$webReady) { throw 'Frontend did not become ready. Check frontend-error.log; use scripts/stop.ps1 before retrying.' }
 Write-Host 'FlowGuard Sentinel: http://localhost:3000 | API: http://127.0.0.1:8000/docs'
 Write-Host 'Demo only. All financial events are synthetic. Logs and process IDs are in the project folder.'

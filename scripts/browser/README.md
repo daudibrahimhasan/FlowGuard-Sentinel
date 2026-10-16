@@ -14,3 +14,5 @@ Pop-Location
 ```
 
 Screenshots are written under `submission/screenshots/`, and machine results to `submission/browser-results.json`. Backend tests additionally cover denied policy paths, exact approval invalidation, protected payroll, receipt reconciliation and controlled audit tampering without damaging the demonstration audit trail.
+
+To capture all eight primary screens at the four UI review viewports, run `node scripts/browser/ui-review.cjs` from the project root with the same project-local PLAYWRIGHT_BROWSERS_PATH. The read-only review writes screenshots and results to `submission/ui-review/`. It is separate from the state-changing workflow tests.

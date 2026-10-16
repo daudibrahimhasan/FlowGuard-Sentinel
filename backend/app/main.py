@@ -67,6 +67,38 @@ def edit(pid:str,body:Edit,user=Depends(identity)):
         if p['status'] in ('executed','rejected'): raise HTTPException(409,'Terminal proposal cannot be edited')
         p.update(body.model_dump(exclude_unset=True)); p['status']='proposed'; p.pop('approved_hash',None); p.pop('approval',None)
         db.put(s,pid,'proposal',p); record_event(s,user,'proposal_edited_approval_invalidated',p['business_id'],{'proposal_id':pid}); s.commit(); db.export_audit(s); return p
+
+@app.get('/api/proposals/{pid}/preview')
+def preview(pid:str,user=Depends(identity)):
+    """Read-only financial scenario on a copy; never grants approval or executes."""
+    from copy import deepcopy
+    with Session(engine) as s:
+        proposal=load(s,pid); business=load(s,proposal['business_id'])
+        before=forecast(business); after=before
+        note='Reminder delivery creates no cash. Customer payment is still uncertain.'
+        if proposal['status'] in ('executed','rejected'):
+            return dict(available=False,reason='Terminal actions have no pending financial preview.')
+        if proposal['type']=='expense_reschedule':
+            scope=mandate(business)
+            target=next((e for e in business['expenses'] if e['id']==proposal['target_id']),None)
+            if not target or not target['flexible'] or target['category'] in PROTECTED:
+                return dict(available=False,reason='Protected or inflexible obligation cannot be deferred.')
+            try:
+                delay=(date.fromisoformat(proposal.get('new_date') or '')-date.fromisoformat(target['date'])).days
+            except ValueError:
+                return dict(available=False,reason='A valid saved payment date is required.')
+            if not 1<=delay<=scope['max_delay_days'] or target['amount']>scope['amount_limit']:
+                return dict(available=False,reason='Saved deferral exceeds the business policy limits.')
+            scenario=deepcopy(business)
+            next(e for e in scenario['expenses'] if e['id']==target['id'])['date']=proposal['new_date']
+            after=forecast(scenario)
+            note='Projected timing effect only. The expense remains payable; collections are uncertain.'
+        elif proposal['type']!='invoice_reminder':
+            return dict(available=False,reason='Unsupported action preview.')
+        return dict(available=True,current_minimum=before['minimum_balance'],
+                    proposed_minimum=after['minimum_balance'],
+                    change=float(money(after['minimum_balance'])-money(before['minimum_balance'])),
+                    confirmed_cash_change=0,note=note,approval_granted=False)
 @app.post('/api/proposals/{pid}/approve')
 def approve(pid:str,user=Depends(identity)):
     authorize(user,{'owner'})

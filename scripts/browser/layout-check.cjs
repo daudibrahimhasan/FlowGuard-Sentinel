@@ -2,7 +2,7 @@ const {chromium}=require('@playwright/test');
 const fs=require('node:fs');const path=require('node:path');
 (async()=>{
  const browser=await chromium.launch();const out=path.resolve(__dirname,'../../submission/screenshots');
- const results=[];
+ const results=[];try{
  for(const width of [375,768,1440]){
   const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -12,6 +12,7 @@ const fs=require('node:fs');const path=require('node:path');
   results.push({width,overflow,page_errors:errors});await page.close();
  }
  fs.writeFileSync(path.resolve(__dirname,'../../submission/layout-results.json'),JSON.stringify(results,null,2));
- console.log(JSON.stringify(results));await browser.close();
+ console.log(JSON.stringify(results));
  if(results.some(r=>r.overflow||r.page_errors.length))process.exitCode=1;
+ }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});

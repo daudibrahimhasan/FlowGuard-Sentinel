@@ -601,13 +601,13 @@
       "approval": {
         "active": true,
         "amount_limit": 50000,
-        "approved_at": "2026-10-16T14:45:58.568707+06:00",
+        "approved_at": "2026-10-16T16:50:27.181515+06:00",
         "approved_hash": "0f0fe5d00c4eb5b69631b3f3582c700518a9ee4682c84179bf0e8330b8434244",
         "authorized_role": "owner",
         "authorized_user": "owner",
         "business_id": "retail",
         "consumed": true,
-        "expires": "2026-10-16T15:15:58.568707+06:00",
+        "expires": "2026-10-16T17:20:27.181515+06:00",
         "max_delay_days": 30,
         "protected_categories": [
           "payroll",
@@ -616,16 +616,16 @@
           "utilities"
         ],
         "recipients": [
-          "accounts6@customer.example",
-          "finance2@buyer.example",
+          "accounts7@customer.example",
+          "finance3@buyer.example",
+          "accounts3@customer.example",
+          "finance1@buyer.example",
           "accounts5@customer.example",
-          "accounts2@customer.example",
+          "accounts6@customer.example",
           "accounts1@customer.example",
           "accounts4@customer.example",
-          "accounts7@customer.example",
-          "finance1@buyer.example",
-          "finance3@buyer.example",
-          "accounts3@customer.example"
+          "finance2@buyer.example",
+          "accounts2@customer.example"
         ],
         "types": [
           "invoice_reminder",
@@ -644,7 +644,7 @@
         "status": "simulated_delivery",
         "target_id": "retail-I1"
       },
-      "id": "7a3657a6-5182-400c-b8ac-125d8bdc088f",
+      "id": "4e0cf67e-18c0-4c37-b9d1-e12477e038f2",
       "message": "Hello, a reminder that invoice retail-I1 has an outstanding balance of CNY 15,000.00. Please confirm your payment date.",
       "new_date": null,
       "reason": "Collect overdue receivable. Delivery does not establish payment.",
@@ -658,13 +658,13 @@
       "approval": {
         "active": true,
         "amount_limit": 50000,
-        "approved_at": "2026-10-16T14:45:59.323268+06:00",
+        "approved_at": "2026-10-16T16:50:28.01271+06:00",
         "approved_hash": "f380efbf4f62b34af1c84cdcbe9cfe083adeb78b00c1123c63f876f00583d218",
         "authorized_role": "owner",
         "authorized_user": "owner",
         "business_id": "retail",
         "consumed": true,
-        "expires": "2026-10-16T15:15:59.323268+06:00",
+        "expires": "2026-10-16T17:20:28.01271+06:00",
         "max_delay_days": 30,
         "protected_categories": [
           "payroll",
@@ -673,16 +673,16 @@
           "utilities"
         ],
         "recipients": [
-          "accounts6@customer.example",
-          "finance2@buyer.example",
+          "accounts7@customer.example",
+          "finance3@buyer.example",
+          "accounts3@customer.example",
+          "finance1@buyer.example",
           "accounts5@customer.example",
-          "accounts2@customer.example",
+          "accounts6@customer.example",
           "accounts1@customer.example",
           "accounts4@customer.example",
-          "accounts7@customer.example",
-          "finance1@buyer.example",
-          "finance3@buyer.example",
-          "accounts3@customer.example"
+          "finance2@buyer.example",
+          "accounts2@customer.example"
         ],
         "types": [
           "invoice_reminder",
@@ -701,7 +701,7 @@
         "status": "rescheduled",
         "target_id": "retail-E1"
       },
-      "id": "8e319ead-2ab2-4a78-9f25-ef985a682cb4",
+      "id": "e7924c74-b33e-4305-9e58-a0d1964cf5a0",
       "message": "Simulate moving this flexible obligation after payroll.",
       "new_date": "2026-11-04",
       "reason": "Defer a flexible expense beyond the 14-day forecast. Obligation remains due; vendor consent is assumed only in this sandbox.",
@@ -714,7 +714,7 @@
       "amount": 15000,
       "business_id": "retail",
       "execution": null,
-      "id": "9c03372f-a250-45be-8406-3660aee7812b",
+      "id": "c2f810b9-6e52-41af-9f94-2b83c1d162d4",
       "message": "Hello, a reminder that invoice retail-I1 has an outstanding balance of CNY 15,000.00. Please confirm your payment date.",
       "new_date": null,
       "reason": "Collect overdue receivable. Delivery does not establish payment.",
@@ -727,7 +727,72 @@
       "amount": 28000.0,
       "business_id": "retail",
       "execution": null,
-      "id": "e18d97b1-2fb9-464a-98f6-5239c0ff9e67",
+      "id": "19b43138-f0d0-4fa7-9855-b235736bf68c",
+      "message": "Simulate moving this flexible obligation after payroll.",
+      "new_date": "2026-11-19",
+      "reason": "Defer a flexible expense beyond the 14-day forecast. Obligation remains due; vendor consent is assumed only in this sandbox.",
+      "recipient": null,
+      "status": "proposed",
+      "target_id": "retail-E1",
+      "type": "expense_reschedule"
+    },
+    {
+      "amount": 14899.75,
+      "approval": {
+        "active": true,
+        "amount_limit": 50000,
+        "approved_at": "2026-10-16T16:50:33.364385+06:00",
+        "approved_hash": "bb5a5118a6b32390d177388a6d104433e5e664a6604668937d8b2fe9bf9eef90",
+        "authorized_role": "owner",
+        "authorized_user": "owner",
+        "business_id": "retail",
+        "consumed": false,
+        "expires": "2026-10-16T17:20:33.364385+06:00",
+        "max_delay_days": 30,
+        "protected_categories": [
+          "payroll",
+          "rent",
+          "tax",
+          "utilities"
+        ],
+        "recipients": [
+          "accounts7@customer.example",
+          "finance3@buyer.example",
+          "accounts3@customer.example",
+          "finance1@buyer.example",
+          "accounts5@customer.example",
+          "accounts6@customer.example",
+          "accounts1@customer.example",
+          "accounts4@customer.example",
+          "finance2@buyer.example",
+          "accounts2@customer.example"
+        ],
+        "types": [
+          "invoice_reminder",
+          "expense_reschedule"
+        ],
+        "vendors": [
+          "Inventory supplier",
+          "Marketing agency"
+        ]
+      },
+      "approved_hash": "bb5a5118a6b32390d177388a6d104433e5e664a6604668937d8b2fe9bf9eef90",
+      "business_id": "retail",
+      "execution": null,
+      "id": "7eb80a14-be09-4a0e-b321-28c72838575b",
+      "message": "Hello, a reminder that invoice retail-I1 has an outstanding balance of CNY 14,899.75. Please confirm your payment date.",
+      "new_date": null,
+      "reason": "Collect overdue receivable. Delivery does not establish payment.",
+      "recipient": "unauthorized@external.example",
+      "status": "approved",
+      "target_id": "retail-I1",
+      "type": "invoice_reminder"
+    },
+    {
+      "amount": 28000.0,
+      "business_id": "retail",
+      "execution": null,
+      "id": "48f019ce-7e49-4347-9230-c0e83dcac48c",
       "message": "Simulate moving this flexible obligation after payroll.",
       "new_date": "2026-11-19",
       "reason": "Defer a flexible expense beyond the 14-day forecast. Obligation remains due; vendor consent is assumed only in this sandbox.",

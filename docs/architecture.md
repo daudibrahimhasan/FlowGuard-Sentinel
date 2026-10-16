@@ -9,3 +9,5 @@ The language model receives bounded financial context and returns validated prop
 The evaluation runner loads frozen fixtures into fresh copies for both arms and calls the same sandbox implementation. Its ungated branch exists only inside the offline runner, with no production bypass parameter. The lab displays those recorded runs. Passing this suite does not establish general prompt-injection resistance.
 
 `backend/app/engine.py` contains the monetary model and policy boundary; `generator.py` owns reproducible fixtures; `storage.py` owns SQLAlchemy state and audit; `agent.py` owns model interaction; `main.py` exposes the API; `evaluation.py` runs the isolated comparison. `frontend/app/page.tsx` connects the workspace to these APIs. This compact structure is intentional for the prototype.
+
+The UI review drawer also uses `GET /api/proposals/{id}/preview` for a read-only forecast on copied state. It writes no financial/audit records and grants no authority; execution still passes through the original approval and policy route.

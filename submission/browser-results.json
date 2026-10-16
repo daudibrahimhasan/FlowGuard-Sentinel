@@ -117,12 +117,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2324,
+                  "duration": 2465,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T08:45:57.549Z",
+                  "startTime": "2026-10-16T10:50:25.954Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -151,12 +151,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1469,
+                  "duration": 1321,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T08:45:59.971Z",
+                  "startTime": "2026-10-16T10:50:28.516Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -166,7 +166,7 @@
           ],
           "id": "9dd6095910c8eaac1dc1-b7376b529318fc38d6e2",
           "file": "workflow.spec.cjs",
-          "line": 39,
+          "line": 42,
           "column": 1
         },
         {
@@ -185,12 +185,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 469,
+                  "duration": 418,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T08:46:01.449Z",
+                  "startTime": "2026-10-16T10:50:29.845Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -200,7 +200,7 @@
           ],
           "id": "9dd6095910c8eaac1dc1-ad5bf7b935e0c15d9d42",
           "file": "workflow.spec.cjs",
-          "line": 60,
+          "line": 63,
           "column": 1
         },
         {
@@ -219,12 +219,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1357,
+                  "duration": 1122,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-16T08:46:01.928Z",
+                  "startTime": "2026-10-16T10:50:30.275Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -234,7 +234,109 @@
           ],
           "id": "9dd6095910c8eaac1dc1-a3036c13ebf7fa217815",
           "file": "workflow.spec.cjs",
-          "line": 69,
+          "line": 72,
+          "column": 1
+        },
+        {
+          "title": "Command navigation, invoice filters, chart selection and mobile drawer work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 834,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T10:50:31.408Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9dd6095910c8eaac1dc1-5f0d30017c455a62a3a3",
+          "file": "workflow.spec.cjs",
+          "line": 96,
+          "column": 1
+        },
+        {
+          "title": "Changed recipient is blocked after approval and explained in Security center",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1491,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T10:50:32.259Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9dd6095910c8eaac1dc1-067f1f413ce104ab336e",
+          "file": "workflow.spec.cjs",
+          "line": 119,
+          "column": 1
+        },
+        {
+          "title": "A failed financial read can be retried without refreshing the page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 431,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-16T10:50:33.761Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9dd6095910c8eaac1dc1-cfda9e9b3c20afc7d100",
+          "file": "workflow.spec.cjs",
+          "line": 138,
           "column": 1
         }
       ]
@@ -242,9 +344,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-16T08:45:57.146Z",
-    "duration": 6223.92,
-    "expected": 4,
+    "startTime": "2026-10-16T10:50:25.577Z",
+    "duration": 8722.58,
+    "expected": 7,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -22,7 +22,7 @@ cd FlowGuard-Sentinel
 .\scripts\start.ps1 -Install
 ```
 
-Open [localhost:3000](http://localhost:3000). Interactive API documentation is at [127.0.0.1:8000/docs](http://127.0.0.1:8000/docs). Later runs can omit `-Install`. Dependencies and caches stay inside this project. The starter waits for backend health, runs local background processes and writes server logs here. Stop those processes before resetting data or launching another copy.
+Open [localhost:3000](http://localhost:3000). Interactive API documentation is at [127.0.0.1:8000/docs](http://127.0.0.1:8000/docs). Later runs can omit `-Install`. Dependencies and caches stay inside this project. The starter waits for backend and frontend readiness, runs local background processes and writes server logs here. Stop those processes before resetting data or launching another copy.
 
 Use `.\scripts\stop.ps1` to stop servers started by the launcher. After a frontend build, `.\scripts\start.ps1 -Production` starts the production frontend with the same local backend.
 
@@ -160,7 +160,7 @@ npm run build
 npm run start -- --hostname 127.0.0.1
 ```
 
-The recorded local validation passed **28 backend tests, 6 frontend tests and 4 browser journeys**, plus lint, TypeScript and a production build. Responsive checks covered 375, 768 and 1440 pixels.
+The current local validation passed **29 backend tests, 8 frontend tests and 7 browser journeys**, plus lint, TypeScript and a production build. The UI redesign was inspected across all eight screens at 1440×900, 1280×800, 768×1024 and 390×844. See the [reference analysis](docs/ui-reference-analysis.md) and [UI validation](docs/ui-validation.md).
 
 Browser tests change synthetic state, so use a fresh reset with both servers running. Installation and reproduction steps are in [scripts/browser/README.md](scripts/browser/README.md). See [validation evidence](submission/validation.md) for scope, warnings and unverified items.
 
